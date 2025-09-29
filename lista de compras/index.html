@@ -4,45 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de compras</title>
-        <script src="script.js" defer></script>
-        <script src="https://cdn.tailwindcss.com"></script>
+    <script src="script.js" defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-    <body class="bg-blue-200 min-h-screen flex items-center justify-center">
-        <!--bg-gray-100/ fondo gris claro -->
-        <!--mi-h-screen/ ocupa toda la pantalla-->
-        <!--flex items-center justify center/ usa flexbox para centrar el contenido vertical y horizontalmente-->
-        <div class="bg-white shadow-lg rounded-2xl p-6 w-full max-w-2xl">
-        <h1 class="text-2xl font-bold mb-4 text-center">Lista de Compras</h1>
+<body class="bg-red-300 min-h-screen flex items-center justify-center p-4">
+
+    <div class="bg-white shadow-lg rounded-2xl p-6 sm:p-10 w-full max-w-2xl">
+        <h1 class="text-2xl sm:text-3xl font-bold mb-6 text-center">Lista de Compras</h1>
 
         <!-- Formulario -->
-            <form id="producto" class="flex gap-2 mb-6">
-                <input id="nombre" type="text" placeholder="Producto" 
-                        class="border rounded-lg p-2 flex-1">
+        <form id="producto" class="flex flex-col sm:flex-row gap-4">
+            <input id="nombre" type="text" placeholder="Producto" 
+                class="border rounded-lg p-2 flex-1">
 
-                <input id="cantidad" type="number" placeholder="Cantidad" min="1"
-                        class="border rounded-lg p-2 w-24">
+            <input id="cantidad" type="number" placeholder="Cantidad" min="1"
+                class="border rounded-lg p-2 w-full sm:w-24">
 
-                <input id="precio" type="number" placeholder="Precio" min="1"
-                        class="border rounded-lg p-2 w-28">
+            <input id="precio" type="number" placeholder="Precio" min="1"
+                class="border rounded-lg p-2 w-full sm:w-28">
 
-                <button id="agregar"
-                        type="submit" 
-                        class="bg-blue-600 text-white px-4 rounded-lg  bg-blue-40s0">
-                        Agregar
-                </button>
-            </form>
+            <button id="agregar" type="submit" 
+                class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 w-full sm:w-auto">
+                Agregar
+            </button>
+        </form>
 
-            <!-- Lista -->
-            <ul id="lista" class="space-y-2"></ul>
+        <!-- Lista -->
+        <ul id="lista" class="space-y-2 mt-6 text-center sm:text-left font-bold text-lg"></ul>
 
-            <!-- Total -->
-            <div class="mt-6 text-right font-bold text-lg">
+        <!-- Total -->
+        <div class="mt-6 text-center sm:text-right font-bold text-lg">
             Total: $<span id="total">0</span>
-            </div>
         </div>
+    </div>
 
-        <!--bg-gray-100/ fondo gris claro -->
-        <!--mi-h-screen/ ocupa toda la pantalla-->
-        <!--flex items-center justify center/ usa flexbox para centrar el contenido vertical y horizontalmente-->
-    </body>
+</body>
 </html>
